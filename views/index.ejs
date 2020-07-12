@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <!-- Inclusion of the head partial -->
+    <%- include('partials/head.ejs') %>
+  </head>
+
+  <body onload="<%= modeLoad %>">
+    <div class="page">
+      <!-- Inclusion of the header partial -->
+      <%- include('partials/header.ejs') %>
+
+      <!-- Welcome Message of the main page -->
+      <div class="main headerGap">
+        <b class="indexWelcome"><%- title %></b>
+        <p class="indexMessage">This is a Homepage.</p>
+      </div>
+
+      <div class="push"></div>
+    </div>
+
+    <script src="scripts/modeSwitch.js"></script>
+  </body>
+
+</html>

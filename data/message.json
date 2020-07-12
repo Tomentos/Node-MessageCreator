@@ -1,0 +1,92 @@
+{
+    "Path": {
+        "Background": {
+            "0": "../images/BG0.webp",
+            "1": "../images/BG1.webp",
+            "2": "../images/BG2.webp",
+            "3": "../images/BG3.webp",
+            "4": "../images/BG4.webp",
+            "5": "../images/BG5.webp",
+            "6": "../images/BG6.webp",
+            "7": "../images/BG7.webp"
+        },
+        "BackgroundThumbnail": {
+            "0": "images/thumbnails/BG0.webp",
+            "1": "images/thumbnails/BG1.webp",
+            "2": "images/thumbnails/BG2.webp",
+            "3": "images/thumbnails/BG3.webp",
+            "4": "images/thumbnails/BG4.webp",
+            "5": "images/thumbnails/BG5.webp",
+            "6": "images/thumbnails/BG6.webp",
+            "7": "images/thumbnails/BG7.webp"
+        },
+        "Sound": {
+            "0": "",
+            "1": "sounds/rickroll.mp3",
+            "2": "sounds/giorno.mp3",
+            "3": "sounds/wolves.mp3",
+            "4": "sounds/megalovania.mp3",
+            "5": "sounds/troll.mp3",
+            "6": "sounds/gnomed.mp3",
+            "7": "sounds/ssbu_reveal.mp3",
+            "8": "sounds/moon.mp3",
+            "9": "sounds/95.mp3",
+            "10": "sounds/xp.mp3",
+            "11": "sounds/disappointed.mp3",
+            "12": "sounds/plop.mp3",
+            "13": "sounds/trombone.mp3"
+        }
+    },
+    "Options": {
+        "Background": {
+            "0": "BG0",
+            "1": "BG1",
+            "2": "BG2",
+            "3": "BG3",
+            "4": "BG4",
+            "5": "BG5",
+            "6": "BG6",
+            "7": "BG7"
+        },
+        "Font": {
+            "0": "Arial",
+            "1": "Times New Roman",
+            "2": "Impact",
+            "3": "Comic Sans MS",
+            "4": "Roboto",
+            "5": "Ubuntu",
+            "6": "Source Sans Pro"
+        },
+        "Appearance": {
+            "0": "Right Spin",
+            "1": "Straight",
+            "2": "Left Spin"
+        },
+        "AppearenceSpeed": {
+            "0": "0",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
+        },
+        "AppearenceDelay": {
+            "0": "0",
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10"
+        }
+    }
+}

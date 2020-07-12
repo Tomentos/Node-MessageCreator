@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <!-- Inclusion of the head partial -->
+    <%- include('partials/head.ejs') %>
+  </head>
+
+  <body onload="<%= modeLoad %>">
+    <div class="page">
+      <!-- Inclusion of the header partial -->
+      <%- include('partials/header.ejs') %>
+
+      <!-- Welcome Message of the subpage -->
+      <div class="main headerGap">
+        <b class="welcome"><%= title %></b>
+        <p class="message">Create a message you can share with your friends via discord or something.<br />Just choose the options that are the most fitting, click the button at the end and copy and send the generated link to whomstever you want to tell something.</p>
+      </div>
+
+      <!-- Container of all message creation options -->
+      <div class="msgOptions">
+        <form action="javascript:formCheck()">
+
+          <!-- Background Option -->
+          <div class="opGroup">
+            <i class="opTitle">Background</i>
+            <br/>
+            <a class="opError" id="bgErr"></a>
+            <div class="opSelect">
+              <%- bgTag %>
+            </div>
+          </div>
+
+          <!-- Font Option -->
+          <div class="opGroup">
+            <i class="opTitle">Font Selection</i>
+            <br/>
+            <a class="opError" id="fErr"></a>
+            <div class="opSelect">
+              <select name="distortion" id="font">
+                <%- fontTag %>
+              </select>
+            </div>
+          </div>
+
+          <!-- Appearance -->
+          <div class="opGroup">
+            <i class="opTitle">Appearance Direction</i>
+            <br/>
+            <a class="opError" id="aErr"></a>
+            <div class="opSelect">
+              <%- appearanceTag %>
+            </div>
+          </div>
+
+          <!-- Appearance Speed -->
+          <div class="opGroup">
+            <i class="opTitle">Appearance Speed (Seconds)</i>
+            <br/>
+            <a class="opError" id="asErr"></a>
+            <div class="opSelect">
+              <%- appearanceSpeedTag %>
+            </div>
+          </div>
+
+          <!-- Appearance Delay -->
+          <div class="opGroup">
+            <i class="opTitle">Appearance Delay (Seconds)</i>
+            <br/>
+            <a class="opError" id="adErr"></a>
+            <div class="opSelect">
+              <%- appearanceDelayTag %>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="opGroup">
+            <i class="opTitle">Text / Message</i>
+            <br/>
+            <a class="opError" id="txtErr"></a>
+            <div class="opSelect">
+              <%- textTag %>
+              <br/>
+              <input class="txtCount" type="text" value="100 / 100" id="textCount" disabled>
+            </div>
+          </div>
+
+          <hr class="resBreak">
+
+          <!-- Resulting Link -->
+          <div class="resGroup">
+            <button class="resTitle" type="submit">Generate Link</button>
+            <br/>
+            <div class="opSelect">
+              <p><a class="result" id="resLink">The link will be displayed here</a></p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="push"></div>
+    </div>
+
+    <script src="scripts/modeSwitch.js"></script>
+    <script src="scripts/messagePage.js"></script>
+    <script src="scripts/charCountdown.js"></script>
+  </body>
+
+</html>

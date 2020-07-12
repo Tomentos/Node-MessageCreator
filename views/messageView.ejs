@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title><%- title %></title>
+        <meta charset="utf-8">
+        <link href="../css/message.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Roboto+Mono|Source+Sans+Pro|Ubuntu&display=swap" rel="stylesheet">
+
+        <style>
+            body {
+                background-image: url(<%= bg %>);
+            }
+
+            .msgContainer {
+                animation-name: <%= appearance %>;
+                animation-duration: <%= speed %>s;
+                animation-delay: <%= delay %>s;
+            }
+
+            .notice {
+                animation-delay: calc(<%= speed %>s + <%= delay %>s + 2s);
+            }
+
+            .link {
+                animation-delay: calc(<%= speed %>s + <%= delay %>s + 4s);
+            }
+
+            b {
+                font-family: "<%= font %>";
+                font-size: calc((<%= msghigh / msglow %> * <%= msgvw %>vw * (<%= msghigh / msgvw %>)) / (<%= msghigh * msglow / msgvw %>) + <%= msglow %>vw); 
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="divContainer">
+            <div class="msgContainer">
+                <b><%- message %></b>
+            </div>
+        </div>
+        <div class="notice">
+            <i>Messages sent through this website are not always meant to be serious and should generally be taken with a grain of salt</i>
+            </br>
+            <i><a class="link" href="<%= home %>">Create your own message</a></i>
+        </div>
+
+    </body>
+
+</html>

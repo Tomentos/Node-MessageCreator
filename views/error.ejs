@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto|Roboto+Mono|Source+Sans+Pro|Ubuntu&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --bgColor: ;
+        --hdColor: ;
+        --hvColor: ;
+        --txtColor: ;
+        --txtLight: ;
+        --txtLink: ;
+      }
+
+      html {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        overflow: auto;
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        background-color: var(--bgColor);
+      }
+
+      header {
+        width: 100%;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        font-family: "Source Code Pro";
+      }
+
+      footer {
+        width: 100%;
+        height: 150px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        background-color: var(--hdColor);
+        font-family: "Roboto";
+        font-size: 16px;
+        color: var(--txtLight);
+      }
+
+      @keyframes buttonHover {
+        0%      {background-color: var(--hdColor);}
+        100%    {background-color: var(--hvColor);}
+      }
+
+      @keyframes explaination {
+        0%      {margin-top: 40px; background-color: var(--hdColor);}
+        100%    {margin-top: 70px; background-color: var(--hvColor);}
+      }
+
+      .headerGap {
+        padding-top: 100px;
+      }
+
+      .main {
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      .welcome {
+        font-family: "Ubuntu";
+        font-size: 100px;
+        color: var(--txtColor);
+      }
+
+      .message {
+        font-family: "Ubuntu";
+        font-size: 30px;
+        color: var(--txtColor);
+      }
+
+      .header {
+        height: 70px;
+        background-color: var(--hdColor);
+        font-size: 40px;
+      }
+
+      .title {
+        position: relative;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: var(--hdColor);
+        text-decoration: none;
+        color: var(--txtColor);
+      }
+
+      .floatLeft {
+        float: left;
+      }
+
+      .floatRight {
+        float: right;
+      }
+
+      .icon {
+        position: relative;
+        width: 100px;
+        height: 70px;
+        background-color: var(--hdColor);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50px;
+      }
+
+      .iconDark {
+        background-image: url(../images/lightMode.svg);
+      }
+
+      .iconLight {
+        background-image: url(../images/darkMode.svg);
+      }
+
+      .iconDark {
+        background-image: url(../images/lightMode.svg);
+      }
+
+      .iconLight {
+        background-image: url(../images/darkMode.svg);
+      }
+
+      .exp {
+        position: absolute;
+        width: 100%;
+        height: 30px;
+        margin-top: 40px;
+        z-index: -1;
+        background-color: var(--hvColor);
+        text-align: center;
+        font-family: "Roboto Mono";
+        font-size: large;
+        color: var(--txtColor);
+      }
+
+      .button:hover {
+        animation-name: buttonHover;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      .button:hover ~ .exp {
+        animation-name: explaination;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      #homepage:hover ~ .exp::after {
+        content: "Go back to the homepage";
+      }
+
+      #mode:hover ~ .exp::after {
+        content: "Switch from Dark to Light mode, or the other way around";
+      }
+
+      #about:hover ~ .exp::after {
+        content: "Go to the about page to find out more about whatever";
+      }
+
+      #message:hover ~ .exp::after {
+        content: "Go to the message creator to send your friends a message in creative wrapping";
+      }
+
+      #article:hover ~ .exp::after {
+        content: "Go to the article creator to create a fake wannabe news article if someone doesn't understand what varifiable means";
+      }
+
+      .page {
+        min-height: 100%;
+        margin-bottom: -180px;
+      }
+
+      .push {
+        padding: 125px;
+      }
+
+      @media only screen and (max-width: 1199px) {
+
+        footer {
+          height: 130px;
+          padding-top: 10px;
+          padding-bottom: 10px;    
+          font-size: 13px;
+        }
+
+        @keyframes explaination {
+          0%      {margin-top: 40px; background-color: var(--hdColor);}
+          100%    {margin-top: 60px; background-color: var(--hvColor);}
+        }
+
+        .headerGap {
+          padding-top: 75px;
+        }
+
+        .welcome {
+          font-size: 75px;
+        }
+
+        .message {
+          font-size: 20px;
+        }
+
+        .header {
+          height: 60px;
+          background-color: var(--hdColor);
+          font-size: 30px;
+        }
+
+        .title {
+          padding-left: 15px;
+          padding-right: 15px;
+          padding-top: 11px;
+          padding-bottom: 11px;
+        }
+
+        .icon {
+          width: 80px;
+          height: 60px;
+          background-size: 35px;
+        }
+
+        .exp {
+          height: 20px;
+          margin-top: 40px;
+          font-size: small;
+        }
+
+        .page {
+          min-height: 100%;
+          margin-bottom: -150px;
+        }
+
+        .push {
+          padding: 100px;
+        }
+      }
+
+      @media only screen and (max-width: 899px) {
+
+        footer {
+          height: 160px;
+          padding-top: 10px;
+          padding-bottom: 10px;    
+          font-size: 13px;
+        }
+
+        @keyframes explaination {
+          0%      {margin-top: 10px; background-color: var(--hdColor);}
+          100%    {margin-top: 50px; background-color: var(--hvColor);}
+        }
+
+        .headerGap {
+          padding-top: 75px;
+        }
+
+        .welcome {
+          font-size: 50px;
+        }
+
+        .message {
+          font-size: 15px;
+        }
+
+        .header {
+          height: 50px;
+          background-color: var(--hdColor);
+          font-size: 25px;
+        }
+
+        .title {
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 9px;
+          padding-bottom: 9px;
+        }
+
+        .icon {
+          width: 60px;
+          height: 50px;
+          background-size: 30px;
+        }
+
+        .exp {
+          height: auto;
+          min-height: 20px;
+          max-height: 40px;
+          margin-top: 10px;
+          font-size: small;
+        }
+
+        .page {
+          min-height: 100%;
+          margin-bottom: -180px;
+        }
+
+        .push {
+          padding: 100px;
+        }
+      }
+    </style>
+  </head>
+
+  <body onload="<%= modeLoad %>">
+    <div class="page">
+      <!-- Inclusion of the header partial -->
+      <%- include('partials/header.ejs') %>
+
+      <!-- Welcome Message of the main page -->
+      <div class="main headerGap">
+        <b class="welcome"><%- number %></br><%- message %></b>
+        <p class="message">Whoa there...</p>
+        <p class="message">You almost crashed this entire website.</br>If you do that again your computer is going to implode.</p>
+      </div>
+
+      <div class="push"></div>
+    </div>
+
+    <script>
+      if (!localStorage.getItem("mode")) {
+        localStorage.setItem("mode", "dark")
+        setDark()
+      }  
+
+      function loadTheme(theme, arrow) {
+        if (localStorage.getItem("mode") == `dark`) {
+            if (theme)
+                setDark()
+        
+            if (arrow)
+                setDarkArrow()
+        }
+
+        else if (localStorage.getItem("mode") == `light`) {
+            if (theme)
+                setLight()
+        
+            if (arrow)
+                setLightArrow()
+        }
+      }
+
+      function modeSwitch(theme, arrow) {
+        if (localStorage.getItem("mode") == `dark`) {
+            if (theme)
+                setLight()
+        
+            if (arrow)
+                setLightArrow()
+        
+            localStorage.setItem("mode", "light")
+        }
+
+        else if (localStorage.getItem("mode") == `light`) {
+            if (theme)
+                setDark()
+        
+            if (arrow)
+                setDarkArrow()
+        
+            localStorage.setItem("mode", "dark")
+        }
+      }
+
+      function setDark() {
+      document.documentElement.style.setProperty("--bgColor", "#161616")
+      document.documentElement.style.setProperty("--hdColor", "#242424")
+      document.documentElement.style.setProperty("--hvColor", "#323232")
+      document.documentElement.style.setProperty("--txtColor", "lightgray")
+      document.documentElement.style.setProperty("--txtLight", "#afafaf")
+      document.documentElement.style.setProperty("--txtLink", "lightseagreen")
+      document.getElementById("mode").classList.remove("iconLight")
+      document.getElementById("mode").classList.add("iconDark")
+      }
+
+      function setDarkArrow() {
+      document.getElementById("arrow0").src = "images/arrow0Light.svg"
+      document.getElementById("arrow1").src = "images/arrow1Light.svg"
+      document.getElementById("arrow2").src = "images/arrow2Light.svg"
+      }
+
+      function setLight() {
+      document.documentElement.style.setProperty("--bgColor", "white")
+      document.documentElement.style.setProperty("--hdColor", "#efefef")
+      document.documentElement.style.setProperty("--hvColor", "#dfdfdf")
+      document.documentElement.style.setProperty("--txtColor", "#2c2c2c")
+      document.documentElement.style.setProperty("--txtLight", "#242424")
+      document.documentElement.style.setProperty("--txtLink", "lightskyblue")
+      document.getElementById("mode").classList.remove("iconDark")
+      document.getElementById("mode").classList.add("iconLight")
+      }
+
+      function setLightArrow() {
+      document.getElementById("arrow0").src = "images/arrow0Dark.svg"
+      document.getElementById("arrow1").src = "images/arrow1Dark.svg"
+      document.getElementById("arrow2").src = "images/arrow2Dark.svg"
+      }
+    </script>
+  </body>
+</html>

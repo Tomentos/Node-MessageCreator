@@ -1,0 +1,554 @@
+/* variables */
+:root {
+    
+    /* Background Colors */
+    --bgColor: ;
+    --hdColor: ;
+    --hvColor: ;
+
+    /* Font Color */
+    --txtColor: ;
+    --txtLight: ;
+    --txtLink: ;
+}
+
+
+
+/* tags */
+
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow: auto;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: var(--bgColor);
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    font-family: "Source Code Pro";
+}
+
+label {
+    padding: 1%;
+}
+
+select {
+    width: auto;
+    height: 40px;
+    background-color: var(--hdColor);
+    font-family: "Open Sans";
+    font-size: 25px;
+    color: var(--txtColor);
+    border: 1px solid var(--txtColor);
+}
+
+option {
+    font-family: "Open Sans";
+    font-size: 20px;
+    color: var(--txtColor);
+}
+
+[type=radio] { 
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+[type=radio] + img {
+    cursor: pointer;
+}
+  
+[type=radio]:checked + img {
+    outline: 5px solid var(--txtColor);
+}
+
+
+
+/* keyframes */
+
+@keyframes buttonHover {
+    0%      {background-color: var(--hdColor);}
+    100%    {background-color: var(--hvColor);}
+}
+
+@keyframes explaination {
+    0%      {margin-top: 40px; background-color: var(--hdColor);}
+    100%    {margin-top: 70px; background-color: var(--hvColor);}
+}
+
+
+
+/* general */
+
+.headerGap {
+    padding-top: 100px;
+}
+
+.main {
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.welcome {
+    font-family: "Ubuntu";
+    font-size: 100px;
+    color: var(--txtColor);
+}
+
+.message {
+    font-family: "Ubuntu";
+    font-size: 30px;
+    color: var(--txtColor);
+}
+
+.push {
+    padding: 125px;
+}
+
+
+
+/* header.ejs */
+
+.header {
+    height: 70px;
+    background-color: var(--hdColor);
+    font-size: 40px;
+}
+
+.title {
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: var(--hdColor);
+    text-decoration: none;
+    color: var(--txtColor);
+}
+
+.floatLeft {
+    float: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+.icon {
+    position: relative;
+    width: 100px;
+    height: 70px;
+    background-color: var(--hdColor);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50px;
+}
+
+.iconDark {
+    background-image: url(../images/lightMode.svg);
+}
+
+.iconLight {
+    background-image: url(../images/darkMode.svg);
+}
+
+.exp {
+    position: absolute;
+    width: 100%;
+    height: 30px;
+    margin-top: 40px;
+    z-index: -1;
+    background-color: var(--hvColor);
+    text-align: center;
+    font-family: "Roboto Mono";
+    font-size: large;
+    color: var(--txtColor);
+}
+
+.button:hover {
+    animation-name: buttonHover;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.button:hover ~ .exp {
+    animation-name: explaination;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+#homepage:hover ~ .exp::after {
+    content: "Go back to the homepage";
+}
+
+#mode:hover ~ .exp::after {
+    content: "Switch from Dark to Light mode, or the other way around";
+}
+
+#message:hover ~ .exp::after {
+    content: "Go to the message creator to send your friends a message in creative wrapping";
+}
+
+
+
+/* index.ejs */
+
+.indexWelcome {
+    font-family: "Ubuntu";
+    font-size: 250px;
+    color: var(--txtColor);
+}
+
+.indexMessage {
+    font-family: "Ubuntu";
+    font-size: 40px;
+    color: var(--txtColor);
+}
+
+
+
+/* Message Creator */
+
+.msgOptions {
+    width: 90%;
+    height: auto;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.opGroup {
+    margin-bottom: 3%;
+}
+
+.opTitle {
+    font-family: "Montserrat";
+    font-size: 40px;
+    color: var(--txtColor);
+}
+
+.opError {
+    font-family: "Montserrat";
+    font-size: 20px;
+    color: orangered;
+}
+
+.opSelect {
+    width: auto;
+    height: auto;
+    margin-top: 0.5%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.resBreak {
+    width: 80%;
+    height: auto;
+    color: var(--txtColor);
+}
+
+.resGroup {
+    width: auto;
+    height: auto;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resTitle {
+    font-family: "Montserrat";
+    font-size: 50px;
+    background-color: var(--hdColor);
+    color: var(--txtColor);
+    border: 1px solid var(--txtColor);
+}
+
+.txtInput {
+    width: auto;
+    height: auto;
+    background-color: var(--hdColor);
+    font-family: "Open Sans";
+    font-size: 25px;
+    color: var(--txtColor);
+    border: 1px solid var(--txtColor);
+}
+
+.imgGap{
+    margin-top: 10px;
+}
+
+.arrow {
+    width: auto;
+    height: 60px;
+    padding: 10px;
+}
+
+.txtCount {
+    right: 0px;
+    bottom: 0px;
+    text-align: center;
+    background-color: var(--bgColor);
+    font-family: "Open Sans";
+    font-size: 15px;
+    color: var(--txtColor);
+    border: 0px;
+}
+
+.result {
+    margin-bottom: 50px;
+    font-family: "Open Sans";
+    font-size: 40px;
+    color: var(--txtLink);
+}
+
+
+
+/* Screen size lower than 1200 pixels */
+@media only screen and (max-width: 1199px) {
+
+    /* tags */
+    select {
+        height: 30px;
+        font-size: 15px;
+    }
+    
+    option {
+        font-size: 15px;
+    }
+
+    [type=radio]:checked + img {
+        outline: 3px solid var(--txtColor);
+    }
+
+
+    /* keyframes */
+    @keyframes explaination {
+        0%      {margin-top: 40px; background-color: var(--hdColor);}
+        100%    {margin-top: 60px; background-color: var(--hvColor);}
+    }
+
+
+    /* general */
+    .headerGap {
+        padding-top: 75px;
+    }
+
+    .welcome {
+        font-size: 75px;
+    }
+    
+    .message {
+        font-size: 20px;
+    }
+
+    .push {
+        padding: 100px;
+    }
+
+
+
+    /* header.ejs */
+    .header {
+        height: 60px;
+        background-color: var(--hdColor);
+        font-size: 30px;
+    }
+    
+    .title {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+    
+    .icon {
+        width: 80px;
+        height: 60px;
+        background-size: 35px;
+    }
+
+    .exp {
+        height: 20px;
+        margin-top: 40px;
+        font-size: small;
+    }
+
+
+
+    /* index.ejs */
+    .indexWelcome {
+        font-size: 150px;
+    }
+
+    .indexMessage {
+        font-size: 30px;
+    }
+
+
+    /* Message Creator */
+    .opTitle {
+        font-size: 30px;
+    }
+
+    .opError {
+        font-size: 15px;
+    }
+
+    .resTitle {
+        font-size: 40px;
+    }
+
+    .txtInput {
+        font-size: 20px;
+    }
+
+    .imgGap{
+        width: auto;
+        height: 75px;
+        margin-top: 5px;
+    }
+
+    .arrow {
+        height: 45px;
+        padding: 5px;
+    }
+
+    .result {
+        margin-bottom: 40px;
+        font-size: 30px;
+    }
+}
+
+
+
+/* Screen size lower than 900 pixels */
+@media only screen and (max-width: 899px) {
+
+    /* tags */
+    select {
+        height: 25px;
+        font-size: 15px;
+    }
+    
+    option {
+        font-size: 10px;
+    }
+
+    [type=radio]:checked + img {
+        outline: 2px solid var(--txtColor);
+    }
+
+
+    /* keyframes */
+    @keyframes explaination {
+        0%      {margin-top: 10px; background-color: var(--hdColor);}
+        100%    {margin-top: 50px; background-color: var(--hvColor);}
+    }
+
+
+    /* general */
+    .headerGap {
+        padding-top: 75px;
+    }
+
+    .welcome {
+        font-size: 50px;
+    }
+    
+    .message {
+        font-size: 15px;
+    }
+
+    .push {
+        padding: 100px;
+    }
+
+
+    /* header.ejs */
+    .header {
+        height: 50px;
+        background-color: var(--hdColor);
+        font-size: 25px;
+    }
+    
+    .title {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 9px;
+        padding-bottom: 9px;
+    }
+    
+    .icon {
+        width: 60px;
+        height: 50px;
+        background-size: 30px;
+    }
+
+    .exp {
+        height: auto;
+        min-height: 20px;
+        max-height: 40px;
+        margin-top: 10px;
+        font-size: small;
+    }
+    
+
+    /* index.ejs */
+    .indexWelcome {
+        font-size: 100px;
+    }
+
+    .indexMessage {
+        font-size: 20px;
+    }
+
+
+    /* Message Creator */
+    .opTitle {
+        font-size: 20px;
+    }
+
+    .opError {
+        font-size: 10px;
+    }
+
+    .resTitle {
+        font-size: 25px;
+    }
+
+    .txtInput {
+        font-size: 15px;
+    }
+
+    .imgGap{
+        width: auto;
+        height: 45px;
+        margin-top: 3px;
+    }
+
+    .arrow {
+        height: 30px;
+        padding: 3px;
+    }
+
+    .result {
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+}
